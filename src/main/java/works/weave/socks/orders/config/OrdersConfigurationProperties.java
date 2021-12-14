@@ -6,7 +6,7 @@ import java.net.URI;
 
 @ConfigurationProperties
 public class OrdersConfigurationProperties {
-    private String domain = "";
+    private String domain = "sock-shop.svc.cluster.local";
 
     public URI getPaymentUri() {
         return new ServiceUri(new Hostname("payment"), new Domain(domain), "/paymentAuth").toUri();
